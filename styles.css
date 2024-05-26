@@ -1,0 +1,44 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.sky {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to bottom, #87ceeb, #f0f8ff);
+}
+
+.plane {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: url('https://cdn-icons-png.flaticon.com/512/5566/5566691.png') no-repeat center center;
+    background-size: contain;
+    animation: flyPlane linear infinite;
+}
+
+.plane:nth-child(1) {
+    top: 20%; 
+    animation-duration: 15s;
+}
+
+.plane:nth-child(2) {
+    top: 50%;
+    animation-duration: 10s;
+}
+
+.plane:nth-child(3) {
+    bottom: 20%;
+    animation-duration: 20s;
+}
+
+@keyframes flyPlane {
+    0% {
+        left: -200px;
+    }
+    100% {
+        left: 100vw;
+    }
+}
